@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="h-screen flex flex-col justify-between">
         <Header />
-        <main className="h-[70%]">
+        <main className="">
           <Main />
           <section className="p-4">
             <h2>Otra sección</h2>
