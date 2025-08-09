@@ -1,7 +1,7 @@
 import { products } from "../data/products";
 import { ProductCard } from "./productCard";
 
-export const Main = () => {
+export const ProductsList = () => {
     return (
         <div className="bg-gray-100 p-4">
             <h2 className="p-4 text-center">Sección para ordernar y/o ver los cafés disponibles</h2>

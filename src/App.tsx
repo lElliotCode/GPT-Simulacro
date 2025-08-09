@@ -1,22 +1,20 @@
-
-import { Header } from "./components/header";
-import { Main } from "./components/main";
-import { Footer } from "./components/footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./components/layout";
+import { About } from "./pages/About";
+import { ProductsList } from "./components/productList";
 
 function App() {
 
   return (
     <>
-      <div className="h-screen flex flex-col justify-between">
-        <Header />
-        <main className="">
-          <Main />
-          <section className="p-4">
-            <h2>Otra sección</h2>
-          </section>
-        </main>
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Routes >
+          <Route path="/" element={<Layout />}>
+            <Route index element={<ProductsList />} />
+            <Route path="about" element={<About />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
